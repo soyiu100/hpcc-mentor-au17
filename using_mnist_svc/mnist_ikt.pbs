@@ -1,0 +1,14 @@
+#/bin/bash
+#PBS -N mnist_svc_py
+#PBS -l nodes=1:ppn=16,feature=16core
+#PBS -l walltime=24:00:00
+#PBS -j oe
+#PBS -o /gscratch/stf/soyiu100/
+#PBS -d /gscratch/stf/soyiu100/mnist_run
+#PBS -q batch
+
+module load anaconda3_4.2
+
+python mnist_svc.py
+
+exit 0
